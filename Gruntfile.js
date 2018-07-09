@@ -195,18 +195,18 @@ grunt.initConfig( {
 	}
 } );
 
-grunt.loadNpmTasks( "grunt-contrib-jshint" );
-grunt.loadNpmTasks( "grunt-contrib-qunit" );
+//grunt.loadNpmTasks( "grunt-contrib-jshint" );
+//grunt.loadNpmTasks( "grunt-contrib-qunit" );
 grunt.loadNpmTasks( "grunt-contrib-uglify" );
 grunt.loadNpmTasks( "grunt-contrib-concat" );
 grunt.loadNpmTasks( "grunt-contrib-compress" );
 grunt.loadNpmTasks( "grunt-contrib-watch" );
-grunt.loadNpmTasks( "grunt-jscs" );
+//grunt.loadNpmTasks( "grunt-jscs" );
 grunt.loadNpmTasks( "grunt-contrib-copy" );
 grunt.loadNpmTasks( "grunt-text-replace" );
 grunt.loadNpmTasks( "grunt-sri" );
 
-grunt.registerTask( "default", [ "concat", "copy", "jscs", "jshint", "qunit" ] );
+grunt.registerTask( "default", [ "concat", "copy"/*, "jscs", "jshint", "qunit"*/ ] );
 grunt.registerTask( "release", [ "default", "uglify", "replace", "compress", "sri" ] );
 grunt.registerTask( "start", [ "concat", "watch" ] );
 
